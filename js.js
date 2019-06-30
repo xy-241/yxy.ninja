@@ -2,3 +2,45 @@
 function menuFunction(x){
   x.classList.toggle("change");
 }
+
+
+var toggleNavStatus = false;
+
+var toggleNav = function(){
+  var getSideNav = document.querySelector(".sideNav");
+  var getSideNavUl = document.querySelector(".sideNav ul");
+  var getSideNavA = document.querySelectorAll(".sideNav a");
+
+  var getSection = document.querySelector("section");
+  var getMainNav = document.querySelector(".navMain"); //navMain
+
+  var getBody = document.querySelector("body"); //body
+
+  if(toggleNavStatus == false){
+    getSideNavUl.style.visibility = "visible";
+
+    getSideNav.style.display ="block"; //Nav
+
+    getMainNav.style.backgroundColor = "black";
+    getMainNav.style.borderBottom = "1.49px grey solid";
+
+    //getMainNav.style.height = "calc(100vh)"; //Testing
+    getMainNav.style.backgroundColor = "black";
+    getBody.style.backgroundColor ="black"; //Testing
+
+    getSection.style.display ="none"; //Content
+    toggleNavStatus = true;
+  }
+  else if (toggleNavStatus == true){
+    getSideNavUl.style.visibility = "hidden";
+
+    getSideNav.style.display ="none"; //Nav
+
+    getMainNav.style.backgroundColor = "#262729";
+    //getMainNav.style.height = "50px"; //testing
+
+    getSection.style.display ="block"; //Content
+    getBody.style.backgroundColor = "white"; //testing
+    toggleNavStatus = false;
+  }
+}

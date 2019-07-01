@@ -1,3 +1,15 @@
+/*Extra Font family*/
+@font-face{
+        font-family: "slant";
+        src:url("SLANT.TTF");
+}
+@font-face {
+        font-family: "text";
+        src:url("CooperHewitt-Light.otf");
+}
+
+/*Extra Font Family*/
+
 /*Common Settings*/
 *{
   margin:0px;
@@ -11,7 +23,6 @@ ul{
 body{
   transition: all 0.5s ease-in-out;
 }
-
 /*Common Settings*/
 
 /*Nav part*/
@@ -58,10 +69,7 @@ body{
 /*Menu */
 
 .sideNav{
-
-  display:none;
-
-
+  display:none; /*Does not leave white space*/
 }
 .sideNav ul{
   display: flex;
@@ -70,7 +78,7 @@ body{
   padding-left: 0px;
 
   visibility: hidden; /*#####*/
-  transition: all 0.5s ease-in-out;
+  transition: all 0.s ease-in-out;
 
 
 }
@@ -101,9 +109,6 @@ body{
 .sideNav #first{
   margin-top: 60px;
 }
-
-
-
 /*Nav part*/
 
 
@@ -112,7 +117,56 @@ body{
 }
 
 
+/*Content*/
 section{
   padding-top: 60px;
   height:2000px;
 }
+
+/*Content*/
+
+/*Responsive*/
+@media only screen and (min-width: 768px){
+  /*Click menu*/
+  .resize{
+    visibility: hidden;
+  }
+  /*Click menu*/
+  .sideNav{
+    display:block;
+    position:fixed;
+    z-index: 1000;
+  }
+  .sideNav ul{
+    visibility: visible;
+    padding: 0px;
+
+    display: flex;
+    flex-direction: row;
+  }
+
+  .sideNav ul li{
+    list-style: none;
+    border-bottom:0;
+
+    margin:0;
+    padding: 0;
+
+    
+  }
+  .sideNav ul li a{
+    display: inline;
+
+    text-decoration: none;
+
+    color: white;
+    font-size: 1.2em;
+  }
+
+  .sideNav #first{
+    margin-top: 0px;
+  }
+}
+
+
+/*Responsive

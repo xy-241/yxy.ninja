@@ -68,6 +68,16 @@ body{
 }
 /*Menu */
 
+.logo{
+  margin: auto;
+  display: block;
+  margin-top:10px;
+  cursor: pointer;
+}
+.logo:hover{
+  background: url("img/physics-25.ico");
+}
+
 .sideNav{
   display:none; /*Does not leave white space*/
 }
@@ -133,16 +143,19 @@ section{
   }
   /*Click menu*/
   .sideNav{
-    display:block;
+    display:block !important;
     position:fixed;
     z-index: 1000;
+    width:100%;
   }
   .sideNav ul{
-    visibility: visible;
+    visibility: visible !important;
     padding: 0px;
 
     display: flex;
     flex-direction: row;
+    justify-content: flex-end;
+
   }
 
   .sideNav ul li{
@@ -152,7 +165,10 @@ section{
     margin:0;
     padding: 0;
 
-    
+    padding-top: 15px;
+    padding-right: 30px;
+
+
   }
   .sideNav ul li a{
     display: inline;
@@ -165,6 +181,14 @@ section{
 
   .sideNav #first{
     margin-top: 0px;
+  }
+
+
+  body{
+    background-color: white !important;
+  }
+  section{
+    display: block !important;
   }
 }
 

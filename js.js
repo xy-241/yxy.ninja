@@ -11,7 +11,7 @@ var toggleNav = function(){
   var getSideNavUl = document.querySelector(".sideNav ul");
   var getSideNavA = document.querySelectorAll(".sideNav a");
 
-  var getSection = document.querySelector("section");
+  var getSection = document.querySelector("article");
   var getMainNav = document.querySelector(".navMain"); //navMain
 
   var getBody = document.querySelector("body"); //body

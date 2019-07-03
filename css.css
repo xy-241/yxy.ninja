@@ -23,6 +23,9 @@ ul{
 body{
   transition: all 0.5s ease-in-out;
 }
+.navMain img:hover{
+  background: url("img/physics-25.ico");
+}
 /*Common Settings*/
 
 /*Nav part*/
@@ -67,15 +70,19 @@ body{
   transform: rotate(45deg) translate(-5px, -5px);
 }
 /*Menu */
-
 .logo{
-  margin: auto;
   display: block;
-  margin-top:10px;
+  position: fixed;
+  top:1.5%;
+  left:50%;
   cursor: pointer;
+  background: url("img/physics-24.ico") no-repeat;
+  width:24px;
+  height:24px;
 }
 .logo:hover{
-  background: url("img/physics-25.ico");
+  background: url("img/physics-25.ico") no-repeat;
+  transition: all 0.3s ease-in-out;
 }
 
 .sideNav{
@@ -89,8 +96,6 @@ body{
 
   visibility: hidden; /*#####*/
   transition: all 0.s ease-in-out;
-
-
 }
 .sideNav ul li{
   list-style: none;
@@ -122,22 +127,27 @@ body{
 /*Nav part*/
 
 
-.gap{
-  margin-top:60px;
-}
+
 
 
 /*Content*/
-section{
+.homeContent{
   padding-top: 60px;
   height:2000px;
 }
 
 /*Content*/
 
+.gap{
+  margin-top:60px;
+}
+
 /*Responsive*/
 @media only screen and (min-width: 768px){
   /*Click menu*/
+  .logo{
+    z-index: 1000;
+  }
   .resize{
     visibility: hidden;
   }
@@ -145,8 +155,9 @@ section{
   .sideNav{
     display:block !important;
     position:fixed;
-    z-index: 1000;
+    z-index: 999;
     width:100%;
+
   }
   .sideNav ul{
     visibility: visible !important;

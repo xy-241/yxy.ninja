@@ -144,7 +144,12 @@ hr{
     margin-bottom: 30px;
 }
 .aboutMe h2{
-  margin-left: 20px;
+  /*margin-left: 20px;*/
+  padding-top: 25px;
+  text-align: center;/*WIthout <hr>*/
+  font-family: monospace;
+  font-weight:900;
+  font-size: 2.5em;
 
 }
 .myPic{
@@ -152,7 +157,7 @@ hr{
   border-radius: 20%;
   display: block;
   margin:auto;
-  margin-top: 30px;
+  margin-top: 10px;
   margin-bottom: 30px;
 
   height:auto;
@@ -173,12 +178,20 @@ hr{
   width:100%;
 }
 .block{
-  margin-bottom: 100px;
+  padding-bottom: 90px;
+  margin-bottom: 10px;
   padding-left: 50px;
   padding-right: 50px;
+  background-color: rgba(230, 231, 232, 0.24);
+
 }
 .block h3{
-  margin-bottom: 10px;
+  margin-top: 90px;
+  margin-bottom: 15px;
+}
+.block p{
+  line-height: 1.6;
+  margin-bottom: 5px;
 }
 .block p,.block li{
   font-family: text;
@@ -196,8 +209,10 @@ hr{
 
 /*Responsive*/
 @media only screen and (min-width: 768px){
+/*Nav*/
   /*Click menu*/
   .logo{
+    left:49%;
     z-index: 1000;
   }
   .resize{
@@ -245,13 +260,42 @@ hr{
   .sideNav #first{
     margin-top: 0px;
   }
-
+/*Nav*/
 
   body{
     background-color: white !important;
   }
+
+/*HomeContent*/
   .homeContent{
     display: block !important;
+  }
+  .aboutMe h2{
+    padding-bottom: 10px;
+  }
+  .myPic{
+    height: 345px !important;
+    width:345px !important;
+    margin-bottom: 20px;
+  }
+  .quote{
+    font-size: 1.5em;
+  }
+  .myInfo{
+    flex-direction: row;
+  }
+  .block1{
+    margin-right: 5px;
+  }
+  .block2{
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  .block3{
+    margin-left: 5px;
+  }
+  .block p,.block li{
+    font-size: 1.2em;
   }
 }
 

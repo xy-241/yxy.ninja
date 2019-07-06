@@ -76,16 +76,18 @@ a{
 .logo{
   display: block;
   position: fixed;
-  top:1.5%;
-  left:47%;
+  top:0%;
+  left:43.8%;
   cursor: pointer;
-  background: url("../img/physics-24.ico") no-repeat;
-  width:24px;
-  height:24px;
+  background: url("../img/logo.png") no-repeat;
+
+  height:48px;
+  width:48px;
+
 }
 .logo:hover{
-  background: url("../img/physics-25.ico") no-repeat;
-  transition: all 0.3s ease-in-out;
+  background: url("../img/logo2.png") no-repeat;
+  transition: all 0.5s ease-in-out;
 }
 
 .sideNav{

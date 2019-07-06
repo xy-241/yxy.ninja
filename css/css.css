@@ -15,13 +15,16 @@
   margin:0px;
   padding:0px;
 }
+body{
+  transition: all 0.5s ease-in-out;
+}
 ul{
   list-style-type: none;
   padding:0;
 }
-
-body{
-  transition: all 0.5s ease-in-out;
+a{
+  text-decoration: none;
+  color: white;
 }
 .navMain img:hover{
   background: url("img/physics-25.ico");
@@ -95,7 +98,7 @@ body{
   padding-left: 0px;
 
   visibility: hidden; /*#####*/
-  transition: all 0.s ease-in-out;
+  transition: all 0s ease-in-out;
 }
 .sideNav ul li{
   list-style: none;
@@ -107,13 +110,14 @@ body{
   padding-bottom: 8px;
 
   transition: all 0.5s ease-in-out; /*#####*/
+
+  font-family: monospace;
+  font-weight: 400;
+  font-size: 1.3em;
 }
 .sideNav ul li a{
   display: block;
 
-  text-decoration: none;
-
-  color: white;
   font-size: 1.2em;
 
   transition: all 0.5s ease-in-out; /*#####*/
@@ -201,6 +205,59 @@ hr{
   font-weight: 300;
   font-size: 30px;
 }
+
+.block3{
+  padding-bottom: 50px;
+}
+.twoPlatform{
+  padding-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+.twoPlatform a{
+  padding-right: 18px;
+  padding-left: 18px;
+  display: block;
+}
+.insta:hover{
+
+  transform:  rotate(5deg) translate(0px, -15px) scale(1.1,1.1);
+  transition: all 0.3s ease-in-out;
+}
+.github:hover{
+  transform: rotate(5deg) translate(0px, -15px) scale(1.1, 1.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.homeFooter{
+  color:white;
+  background-color: #262729;
+
+  padding-top: 20px;
+
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  text-align: center;
+}
+.homeFooter p{
+  cursor: pointer;
+  font-family: monospace;
+  font-size: 1.3em;
+}
+.homeFooter a:hover{
+  color:grey;
+  transition: all 0.5s ease-in-out;
+}
+.backToTop{
+  margin-bottom: 20px;
+}
+.copyright{
+  padding-top: 50px;
+  font-size: 0.6em;
+}
 /*Content*/
 
 .gap{
@@ -283,6 +340,7 @@ hr{
   }
   .myInfo{
     flex-direction: row;
+
   }
   .block1{
     margin-right: 5px;
@@ -296,6 +354,19 @@ hr{
   }
   .block p,.block li{
     font-size: 1.2em;
+  }
+
+  .footerSelection{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .footerSelection p{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .copyright{
+    font-size: 0.8em;
   }
 }
 

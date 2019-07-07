@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Send Me Message</title>
+
+    <link rel="shortcut icon" href="img/logoT.png">
+    <link rel="stylesheet" href="css/init.css">
+    <link rel="stylesheet" href="css/nav.css">
+
+    <link rel="stylesheet" href="css/sendMessage.css">
+    <script src="js/nav.js"></script>
+  </head>
+  <body>
+    <nav class="navMain">
+      <div onclick="toggleNav()"  class="resize">
+      <div class="menu" onclick="menuFunction(this)">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+      </div>
+    </div>
+
+    </nav>
+    <div class="logo">
+      <!--<img src="img/logo.png" alt="logo" class="logo">-->
+      <a href="index.html"></a>
+    </div>
+
+    <nav class="sideNav">
+      <ul>
+        <li id="first"><a href="index.html">Home</a></li>
+        <li><a href="#">My Works</a></li>
+        <li><a href="contactMe.html">Send Me Message</a></li>
+      </ul>
+    </nav>
+
+    <article class="messageContent">
+      <section class = "messageBody">
+        <h2>Send Me A Message</h2>
+        <form class="message" action="https://www.youtube.com/" method="post">
+          <div class="nameFF">
+            <label>First Name:</label>
+            <input type="text" name="firstName" placeholder="Your first Name" required autofocus>
+          </div>
+
+          <div class="nameLF">
+            <label>Last Name:</label>
+            <input type="text" name="lastName" placeholder="Your last name" required autofocus>
+          </div>
+
+          <div class="emailF">
+            <label>Email:</label>
+            <input type="email" name="email" required autofocus>
+          </div>
+
+          <div class="messageF">
+            <label>Message:</label>
+            <textarea name="message" rows="8" cols="80"></textarea>
+          </div>
+
+          <div class="center">
+            <input type="submit" name="submit" value="Submit" class="submit">
+          </div>
+
+        </form>
+      </section>
+
+
+
+
+      <footer class="homeFooter">
+        <div class="footerSelection">
+          <p class="homeFooter1"><a href="#">My Works</a></p>
+          <p class=homeFooter2><a href="contactMe.html">Send Me Message</a></p>
+        </div>
+        <div class="copyright">Copyright  &copy; 2019 YXY. All rights reserved.</div>
+      </footer>
+    </article>
+  </body>
+</html>

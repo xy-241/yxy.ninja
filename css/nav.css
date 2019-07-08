@@ -11,7 +11,7 @@
 /*Extra Font Family*/
 
 /*Common Settings*/
-/**{
+/*{
   margin:0px;
   padding:0px;
 }
@@ -25,7 +25,7 @@ ul{
 a{
   text-decoration: none;
   color: white;
-}*/
+}
 /*Common Settings*/
 
 /*Nav part*/
@@ -125,6 +125,9 @@ a{
 }
 .sideNav #first{
   margin-top: 60px;
+}
+.onNavPage{
+  color:grey;
 }
 /*Nav part*/
 
@@ -236,9 +239,13 @@ a{
   font-family: monospace;
   font-size: 1.3em;
 }
-.homeFooter1, .homeFooter2{
+.homeFooter1, .homeFooter2, .homeFooter0{
   margin-bottom: 8px;
 }
+.onPage{
+  color:grey;
+}
+
 .homeFooter a:hover{
   color:grey;
   transition: all 0.5s ease-in-out;
@@ -305,6 +312,9 @@ a{
     color: white;
     font-size: 1.2em;
   }
+  .onNavPage{
+    color:grey !important;
+  }
 
   .sideNav #first{
     margin-top: 0px;
@@ -360,6 +370,10 @@ a{
   .copyright{
     font-size: 0.8em;
   }
+  .onPage{
+    color:white;
+  }
+
 }
 
 /*@media only screen and (min-width: 500px){

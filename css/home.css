@@ -2,6 +2,7 @@
   padding-top: 85px;
 }
 
+
 .aboutMe h2{
 
   text-align: center;
@@ -68,9 +69,10 @@
   justify-content: center;
 }
 .twoPlatform a{
-  padding-right: 18px;
-  padding-left: 18px;
+  margin-right: 18px;
+  margin-left: 18px;
   display: block;
+  height:32px;
 }
 .insta:hover{
 
@@ -81,6 +83,9 @@
   transform: rotate(5deg) translate(0px, -15px) scale(1.1, 1.1);
   transition: all 0.3s ease-in-out;
 }
+
+
+
 
 @media only screen and (min-width: 768px){
   .homeContent{

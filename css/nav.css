@@ -357,6 +357,9 @@ a{
   .block p,.block li{
     font-size: 1.2em;
   }*/
+  .homeFooter{
+    padding-top: 95px !important;
+  }
 
   .footerSelection{
     display:flex;
@@ -369,11 +372,11 @@ a{
   }
   .copyright{
     font-size: 0.8em;
+    padding-top: 164px;
   }
   .onPage{
     color:white;
   }
-
 }
 
 /*@media only screen and (min-width: 500px){

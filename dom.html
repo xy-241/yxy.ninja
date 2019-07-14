@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+
+
+    <script type="text/javascript">
+      function add(){
+        //Get new data
+        var userName = document.getElementById("userName").value;
+        var userContact = document.getElementById("userContact").value;
+
+
+        var row = list.insertRow(-1);
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+
+        cell1.innerHTML = userName;
+        cell2.innerHTML = userContact;
+
+        var array;
+        var data = localStorage.getItem("contact");
+
+        if(data == null){
+          array = [];
+        }
+        else{
+          array = JSON.parse(data);
+        }
+
+        array.push({"userName": userName, "userContact":userContact});
+        localStorage.setItem("contact", JSON.stringify(array));
+
+      }
+    </script>
+
+    <style media="screen">
+      table{
+        border-collapse: collapse;
+      }
+    </style>
+  </head>
+  <body onload="fillUp()">
+
+    <form class="" action="index.html" method="post">
+      <input type="name" name="" value="" id="userName">
+      <input type="number" name="" value="" id="userContact">
+
+      <button type="button" name="button" onclick="add()">Submit</button>
+    </form>
+
+    <table border="1" id="list">
+      <tr>
+        <th>Name</th>
+        <th>Contact</th>
+      </tr>
+    </table>
+
+
+    <script type="text/javascript">
+
+    var list = document.getElementById("list");
+    function fillUp(){
+      var array;
+      var data = localStorage.getItem("contact");
+      var list = document.getElementById("list");
+
+      if (data == null){
+        array = [];
+      }
+      else{
+        array = JSON.parse(data);
+      }
+
+      for(var i = 0; i<array.length; i++){
+        var row =  list.insertRow(-1);
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+
+        cell1.innerHTML = array[i]["userName"];
+        cell2.innerHTML = array[i]["userContact"];
+      }
+    }
+    </script>
+  </body>
+</html>

@@ -41,6 +41,7 @@
   padding-left: 50px;
   padding-right: 50px;
   background-color: rgba(230, 231, 232, 0.24);
+  flex-basis: 33.3%;
 
 }
 .block h3{

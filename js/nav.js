@@ -39,6 +39,9 @@ var toggleNav = function(){
     getMainNav.style.backgroundColor = "#262729";
     //getMainNav.style.height = "50px"; //testing
 
+    getMainNav.style.borderBottom = "1px black solid";
+
+
     getSection.style.display ="block"; //Content
     getBody.style.backgroundColor = "white"; //testing
     toggleNavStatus = false;

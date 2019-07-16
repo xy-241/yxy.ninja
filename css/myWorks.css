@@ -3,18 +3,8 @@
 }
 
 
-/*
-When screen size grows big,
-.workContent{
-  padding-top: 0px;
-.banner{
-  z-index: 0;
-}
-}
- */
-.navMain{
 
-}
+
 .banner{
   position: relative;
   overflow: hidden;
@@ -26,28 +16,44 @@ When screen size grows big,
   height: 400px;
 
 }
-.banner h2{
-  text-align: center;
-  font-family: monospace;
-  font-weight:900;
-  font-size: 3.5em;
-  color:black;
-
+.background{
   position: absolute;
   height: 100%;
   width: 100%;
   top: 0%;
   left: 0%;
-  padding-top: 70px;
-  background-color: grey;
-  opacity: 0.7;
+  padding-top: 0px;
+  background-color: #262729;
+  opacity: 0.8;
 }
+.banner h2{
+  text-align: center;
+  font-family: monospace;
+  font-weight:900;
+  font-size: 3.5em;
+  color:white;
+
+  position: absolute;
+  left:0%;
+  top:40%;
+  width: 100%;
+}
+
 
 
 .empty{
-  margin-top: 500px;
+  margin-top: 800px;
 }
 
 @media only screen and (min-width: 768px){
+  .workContent{
+    padding-top: 0px;
+  }
+  .banner{
+    z-index: 0;
+  }
 
+  .banner h2{
+    font-size: 6em;
+  }
 }

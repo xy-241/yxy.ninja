@@ -49,4 +49,82 @@
 
  .grade{
    font-family: monospace;
+   font-size: 1.5em;
+
+   border: 1px #262729 solid;
+   margin-bottom: 30px;
+
+   display: flex;
+   flex-direction: column;
+
  }
+
+
+.schoolTerm{
+  background: #262729;
+  color: white;
+
+  margin-bottom: 8px;
+}
+.schoolTerm p{
+  padding-left: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+}
+
+.userInput, label{
+  padding-left: 28px;
+}
+.userInput{
+  margin-bottom: 8px;
+}
+
+#creditLast{
+  margin-bottom: 30px;
+}
+
+form {
+  width:95%;
+  margin: auto;
+  padding-bottom: 20px;
+}
+label{
+  margin-right: 30px;
+}
+select{
+  background-color: white;
+
+  width: 82%;
+  height: 30px;
+}
+input{
+  width: 80%;
+  height: 30px;
+}
+select, input{
+  padding-left: 5px;
+}
+button{
+  margin: auto;
+  width:45%;
+  height: 30px;
+
+
+  background-color: white;
+  color: black;
+
+
+  font-family: monospace;
+
+
+  border: 1px black solid;
+
+  cursor: pointer;
+}
+
+button:hover{
+  color: white;
+  background-color: black;
+  transition: all 0.5s ease-in-out;
+}

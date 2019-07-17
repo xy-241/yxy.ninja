@@ -40,6 +40,7 @@
     </nav>
 
     <article class="gpaContent">
+
       <section class="intro">
         <h2>GPA Calculator</h2>
 
@@ -98,27 +99,44 @@
         </div>
       </section>
 
-      <section>
-        <form class="grade" action="index.html" method="post">
+      <section class="Graderesults">
 
-          <label>Module Name:</label>
-          <input type="text" name="" value="" placeholder="Module Name">
+        <form class="grade">
+            <div class="schoolTerm">
+              <p>Semester 1</p>
+            </div>
 
-          <label>Grade:</label>
-          <select class="" name="">
-            <option selected="selected" value="NA">-</option>
-            <option value="A">A</option>
-            <option value="B+">B+</option>
-            <option value="B">B</option>
-            <option value="C+">C+</option>
-            <option value="C">C</option>
-            <option value="D+">D+</option>
-            <option value="D">D</option>
-            <option value="F">F</option>
-          </select>
+            <div class="modules">
+              <div class="oneModule">
+                <label>Module Name:</label>
+                <div class="userInput">
+                  <input type="text" class="moduleName" value="" placeholder="Module Name">
+                </div>
 
-          <label>Credits:</label>
-          <input type="number" name="" value="">
+                <label>Grade:</label>
+                <div class="userInput">
+                  <select class="moduleGrade">
+                    <option selected="selected" value="NA">-</option>
+                    <option value="A">A</option>
+                    <option value="B+">B+</option>
+                    <option value="B">B</option>
+                    <option value="C+">C+</option>
+                    <option value="C">C</option>
+                    <option value="D+">D+</option>
+                    <option value="D">D</option>
+                    <option value="F">F</option>
+                  </select>
+                </div>
+
+                <label>Credits:</label>
+                <div class="userInput" id="creditLast">
+                  <input type="number" class="moduleCredit" value="">
+                </div>
+              </div>
+            </div>
+
+
+            <button id= "addModule" type="button" name="button">Add Another Module</button>
         </form>
       </section>
 

@@ -6,6 +6,7 @@ if(document.readyState == "loading"){
 
 
 function ready(){
+
   var moduleButton = document.getElementsByClassName("moduleButton")[0];
   moduleButton.addEventListener("click", addAnotherModule);
 }
@@ -17,14 +18,18 @@ function addAnotherModule(event){
   var oneModule = document.createElement("div");
   oneModule.classList.add("oneModule");
 
+  var moduleNames = document.getElementsByClassName("moduleName");
+  var place = moduleNames.length + 1;
+
   var oneModuleContent = `
-  <label>Module Name:</label>
   <div class="userInput">
-    <input type="text" class="moduleName" value="" placeholder="Module Name">
+  <label>Module Name:</label>
+    <input type="text" class="moduleName" value="" placeholder="Module Name ${place}">
   </div>
 
-  <label>Grade:</label>
+
   <div class="userInput">
+  <label>Grade:</label>
     <select class="moduleGrade">
       <option selected="selected" value="NA">-</option>
       <option value="A">A</option>
@@ -38,8 +43,8 @@ function addAnotherModule(event){
     </select>
   </div>
 
-  <label>Credits:</label>
   <div class="userInput" id="creditLast">
+  <label>Credits:</label>
     <input type="number" class="moduleCredit" value="">
   </div>
   `;

@@ -54,8 +54,7 @@
    border: 1px #262729 solid;
    margin-bottom: 30px;
 
-   display: flex;
-   flex-direction: column;
+
 
  }
 
@@ -63,8 +62,6 @@
 .schoolTerm{
   background: #262729;
   color: white;
-
-  margin-bottom: 8px;
 }
 .schoolTerm p{
   padding-left: 20px;
@@ -80,9 +77,19 @@
   margin-bottom: 8px;
 }
 
-#creditLast{
-  margin-bottom: 30px;
+.modules{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
 }
+.oneModule{
+  background-color: rgba(230, 231, 232, 0.24);
+  margin-top: 10px;
+  padding-bottom: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
 
 form {
   width:95%;
@@ -95,7 +102,7 @@ label{
 select{
   background-color: white;
 
-  width: 82%;
+  width: 80%;
   height: 30px;
 }
 input{
@@ -104,27 +111,23 @@ input{
 }
 select, input{
   padding-left: 5px;
+  box-sizing:content-box;
 }
-button{
+
+.moduleButtonDiv{
+  width:60%;
   margin: auto;
-  width:45%;
-  height: 30px;
-
-
+}
+.moduleButton{
   background-color: white;
-  color: black;
-
-
-  font-family: monospace;
-
-
-  border: 1px black solid;
-
+  border: 1px solid black;
   cursor: pointer;
+  font-family: monospace;
+  padding: 2px;
 }
 
-button:hover{
-  color: white;
+.moduleButton:hover{
   background-color: black;
-  transition: all 0.5s ease-in-out;
+  color:white;
+  transition: all 0.45s ease-in-out;
 }

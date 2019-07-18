@@ -6,13 +6,13 @@ if(document.readyState == "loading"){
 
 
 function ready(){
-  var addModule = document.getElementById("addModule");
-  addModule.addEventListener("click", addAnotherModule);
+  var moduleButton = document.getElementsByClassName("moduleButton")[0];
+  moduleButton.addEventListener("click", addAnotherModule);
 }
 
 function addAnotherModule(event){
   var button = event.target;
-  var moduleField =  button.parentElement.getElementsByClassName("modules")[0];
+  var moduleField =  button.parentElement.parentElement.getElementsByClassName("modules")[0];
 
   var oneModule = document.createElement("div");
   oneModule.classList.add("oneModule");
@@ -45,7 +45,7 @@ function addAnotherModule(event){
   `;
   oneModule.innerHTML = oneModuleContent;
 
-  moduleField.append(oneModule);
+  moduleField.appendChild(oneModule);
 
 }
 

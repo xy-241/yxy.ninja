@@ -6,12 +6,17 @@ if(document.readyState == "loading"){
 
 
 function ready(){
-  var moduleButton = document.getElementsByClassName("moduleButton")[0];
-  moduleButton.addEventListener("click", addAnotherModule);
+  //Add Module Button
+  var moduleButtons = document.getElementsByClassName("moduleButton");
+  for(var i = 0; i<moduleButtons.length; i++){
+    var moduleButton = moduleButtons[i];
+    moduleButton.addEventListener("click", addAnotherModule);
+  }
 
+  //Calculate Button
   var calculateButton = document.getElementsByClassName("calculateButton")[0];
   calculateButton.addEventListener("click", calculateResult);
-
+  //Add form button
   var addFormButton = document.getElementsByClassName("addFormButton")[0];
   addFormButton.addEventListener("click", addForm);
 }
@@ -19,7 +24,65 @@ function ready(){
 function addForm(event){
   var button = event.target;
   var forms = button.parentElement.parentElement;
-  alert(forms);
+
+  var form = document.createElement("form");
+  form.classList.add("grade");
+
+  var lastFormSemester = document.getElementsByClassName("schoolTerm");
+  lastFormSemester = lastFormSemester[(lastFormSemester.length-1)].getElementsByTagName("p")[0].innerHTML;
+  lastFormSemester = parseInt(lastFormSemester[lastFormSemester.length - 1]) + 1;
+
+  var formContent = `
+  <div class="schoolTerm">
+    <p>Semester ${lastFormSemester}</p>
+  </div>
+
+  <div class="modules">
+    <div class="oneModule">
+
+      <div class="userInput">
+        <label>Module Name:</label>
+        <input type="text" class="moduleName" value="" placeholder="Module Name 1">
+      </div>
+
+
+      <div class="userInput">
+        <label>Grade:</label>
+        <select class="moduleGrade">
+          <option selected="selected" value="NA">-</option>
+          <option value="A">A</option>
+          <option value="B+">B+</option>
+          <option value="B">B</option>
+          <option value="C+">C+</option>
+          <option value="C">C</option>
+          <option value="D+">D+</option>
+          <option value="D">D</option>
+          <option value="F">F</option>
+        </select>
+      </div>
+
+
+      <div class="userInput">
+        <label>Credits:</label>
+        <input type="number" class="moduleCredit" value="">
+      </div>
+    </div>
+  </div>
+
+  <div class="moduleButtonDiv">
+    <input type="button" class="moduleButton" value="Add Another Module">
+  </div>
+  `
+  form.innerHTML = formContent;
+  forms.insertBefore(form, forms.getElementsByClassName("addForm")[0]);
+
+  //Make new addModule button working
+  var moduleButtons = document.getElementsByClassName("moduleButton");
+  for(var i = 0; i<moduleButtons.length; i++){
+    var moduleButton = moduleButtons[i];
+    moduleButton.addEventListener("click", addAnotherModule);
+  }
+
 } //End Function [Add Form]
 function calculateResult(event){
   var totalGrade = 0;

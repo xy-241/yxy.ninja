@@ -78,7 +78,7 @@ select, input{
    font-size: 1.5em;
 
    border: 1px #262729 solid;
-   margin-bottom: 30px;
+   margin-bottom: 20px;
  }
 
 
@@ -118,11 +118,11 @@ select, input{
 
 
 
-.moduleButtonDiv{
+.moduleButtonDiv, .calculateGPA, .addForm{
   width:60%;
   margin: auto;
 }
-.moduleButton{
+.moduleButton, .calculateButton, .addFormButton{
   width: 100%;
   background-color: white;
   border: 1px solid black;
@@ -130,11 +130,24 @@ select, input{
   font-family: monospace;
   padding: 2px;
 }
+.addForm{
+  width:57%;
+  margin-bottom: 30px;
+}
 
-.moduleButton:hover{
+.moduleButton:hover, .calculateButton:hover, .addFormButton:hover{
   background-color: black;
   color:white;
   transition: all 0.45s ease-in-out;
+}
+
+.calculateGPA{
+  width: 85%;
+}
+.calculateButton{
+  font-size: 1.5em;
+  margin-bottom: 50px;
+
 }
 
 

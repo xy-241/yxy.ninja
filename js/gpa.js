@@ -93,14 +93,15 @@ function calculateResult(event){
   var forms = button.parentElement.parentElement.getElementsByClassName("grade");
   //Loop through the forms
   for(var i =0; i< forms.length; i++){
-    var form = forms[0];
+    var form = forms[i];
     var modules = form.getElementsByClassName("modules")[0].getElementsByClassName("oneModule");
     //Loop through the modules
-    for(var i=0; i<modules.length; i++){
-      var oneModule = modules[i];
+    for(var j=0; j<modules.length; j++){
+      var oneModule = modules[j];
 
       var moduleGrade = oneModule.getElementsByClassName("moduleGrade")[0].value;
       var moduleCredit = oneModule.getElementsByClassName("moduleCredit")[0].value;
+
 
       if(moduleCredit == "" || moduleGrade == "NA"){
 
@@ -141,6 +142,7 @@ function calculateResult(event){
   } //End for forms loop
 
   finalResult = totalGrade / totalCredit;
+  finalResult = Math.round(finalResult*100)/100;
   alert(finalResult);
   //Calculate FUnction //
 } //End function [Calculate]
@@ -151,7 +153,7 @@ function addAnotherModule(event){
   var oneModule = document.createElement("div");
   oneModule.classList.add("oneModule");
 
-  var moduleNames = document.getElementsByClassName("moduleName");
+  var moduleNames = moduleField.getElementsByClassName("moduleName");
   var place = moduleNames.length + 1;
 
   var oneModuleContent = `

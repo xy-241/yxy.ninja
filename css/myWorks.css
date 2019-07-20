@@ -39,8 +39,44 @@
   width: 100%;
 }
 
+/*Tabs*/
+.sellingItems{
+  text-align: center;
+  margin-top: 15px;
+}
+.tabButton{
+  background-color: white ;
+  border: none;
+  border-bottom: 1px solid #262729;
+  font-family: monospace;
+  font-size:1.2em;
+  font-weight: 800;
+
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+.tabButton:nth-child(1){
+  margin-right: 10px;
+}
+.tabButton:nth-child(2){
+  margin-left: 10px;
+}
+.tabButton:hover{
+  background-color: black;
+  color: white;
+}
+/*Tabs*/
 
 
+/*SubPages*/
+.sellingTools{   /*Making the first visible only*/
+  display: none;
+}
+
+
+
+
+/*SubPages*/
 .empty{
   margin-top: 800px;
 }

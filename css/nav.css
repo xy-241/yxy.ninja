@@ -275,6 +275,9 @@ a{
     visibility: hidden;
   }
   /*Click menu*/
+  .bar1, .bar2, .bar3{
+    transition: 0s;
+  }
   .sideNav{
     display:block !important;
     position:fixed;

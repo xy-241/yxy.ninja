@@ -7,7 +7,15 @@
         font-family: "text";
         src:url("../fonts/CooperHewitt-Light.otf");
 }
+@font-face {
+  font-family: "shopFont";
+  src: url("../fonts/FunSized.ttf");
+}
 
+@font-face {
+  font-family: "shopFont2";
+  src: url("../fonts/CRACKWALL-Regular.ttf");
+}
 /*Extra Font Family*/
 
 /*Common Settings*/

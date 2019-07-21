@@ -1,3 +1,4 @@
+
 .workContent{  /*== homeContent*/
   padding-top: 50px;
 }
@@ -28,7 +29,7 @@
 }
 .banner h2{
   text-align: center;
-  font-family: monospace;
+  font-family: shopFont2;
   font-weight:900;
   font-size: 3.5em;
   color:white;
@@ -47,13 +48,13 @@
 .tabButton{
   background-color: white ;
   border: none;
-  border-bottom: 1px solid #262729;
-  font-family: monospace;
+  border-bottom: 1px solid #000066;
+  font-family: shopFont;
   font-size:1.2em;
   font-weight: 800;
 
   cursor: pointer;
-  transition: all 0.4s ease-in-out;
+
 }
 .tabButton:nth-child(1){
   margin-right: 10px;
@@ -62,16 +63,68 @@
   margin-left: 10px;
 }
 .tabButton:hover{
-  background-color: black;
-  color: white;
+  border: 0px;
+
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%23453886' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+  background-position: 0% 100%;
+  background-repeat: repeat-x;
+
+  background-size: auto 6px;
 }
 /*Tabs*/
 
+
+/*Pages*/
+.subPage h3{
+  text-align: center;
+  width: 100%;
+  border-top: 1px black solid;
+  margin-top: 10px;
+  font-family: shopFont2;
+}
+.shopItems{
+  display: flex;
+  flex-direction: column;
+
+  text-align: center;
+  align-items: center;
+}
+
+.shopItem{
+  background-color: rgba(230, 231, 232, 0.24);
+  margin-bottom: 10px;
+  width: 100%;
+
+  text-align: center;
+}
+
+.shopItem img{
+  display: block;
+  border: 1px black solid;
+  margin:  auto;
+
+}
+
+.shopItemDetails{
+  display: flex;
+  justify-content: space-between;
+  width:300px;
+
+
+  margin-top: 5px;
+  margin-left: auto;
+  margin-right: auto;
+}
+button{
+  cursor: pointer;
+}
+/*Pages*/
 
 /*SubPages*/
 .sellingTools{   /*Making the first visible only*/
   display: none;
 }
+
 
 
 

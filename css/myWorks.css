@@ -49,7 +49,7 @@
   background-color: white ;
   border: none;
   border-bottom: 1px solid #000066;
-  font-family: shopFont;
+  font-family: shopFont2;
   font-size:1.2em;
   font-weight: 800;
 
@@ -75,12 +75,14 @@
 
 
 /*Pages*/
+
 .subPage h3{
   text-align: center;
   width: 100%;
-  border-top: 1px black solid;
-  margin-top: 10px;
+
+  margin-top: 50px;
   font-family: shopFont2;
+  font-size: 3em;
 }
 .shopItems{
   display: flex;
@@ -96,13 +98,47 @@
   width: 100%;
 
   text-align: center;
-}
 
+  padding-top: 75px;
+  padding-bottom: 75px;
+}
+.itemName{
+  font-family: shopFont2;
+  font-size: 2em;
+
+  display: block;
+  margin-bottom: 5px;
+}
 .shopItem img{
   display: block;
   border: 1px black solid;
   margin:  auto;
+}
+.itemPrice{
+  font-family: shopFont2;
+  margin-left: 5px;
+  margin-top: 5.5px;
+  padding-top: 4px;
 
+  font-size: 1.2em;
+}
+.addToCart{
+  font-family: shopFont2;
+  background-color: rgba(230, 231, 232, 0.24);
+  border:none;
+  border: 1px solid black;
+  margin-right: 5px;
+  margin-top: 5px;
+  padding-left: 3px;
+  padding-right: 3px;
+  padding-top: 3px;
+
+  font-size: 1.2em;
+}
+.addToCart:hover{
+  background-color: black;
+  color:rgba(230, 231, 232, 1);
+  transition: all 0.4s ease-in-out;
 }
 
 .shopItemDetails{
@@ -126,7 +162,36 @@ button{
 }
 
 
+.goToShoppingCart{
+  font-family: shopFont2;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  margin-bottom: 100px;
+  text-align: center;
 
+  background-color: white;
+  border:none;
+  border: 1px black solid;
+  font-size: 2em;
+  padding-top: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.goToShoppingCart:hover{
+  background-color: black;
+  color:rgba(230, 231, 232, 1);
+  transition: all 0.4s ease-in-out;
+}
+
+
+.shoppingCart{
+  display: none;
+}
+.goBack{
+  display: none;
+}
 
 
 /*SubPages*/
@@ -145,4 +210,25 @@ button{
   .banner h2{
     font-size: 6em;
   }
+
+  .tabButton{
+    font-size: 1.8em;
+    font-weight: 600;
+  }
+
+  .subPage h3{
+    font-size: 3.7em;
+    font-weight: 600;
+  }
+  .shopItems{
+    flex-direction: row;
+  }
+
+  .item1{
+    margin-right: 5px;
+  }
+  .item2{
+    margin-left: 5px;
+  }
+
 }

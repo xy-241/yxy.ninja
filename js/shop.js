@@ -12,9 +12,13 @@ function ready(){
   }
   //Tab Actions
 
-
+  var goToShoppingCart = document.getElementsByClassName("goToShoppingCart")[0];
+  goToShoppingCart.addEventListener("click", showShoppingCart);
 }
 
+function showShoppingCart(event){
+
+}
 function displayItems(event){
   //Get the item Page Name
   var button = event.target;

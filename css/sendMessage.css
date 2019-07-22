@@ -60,3 +60,7 @@ body{
   height: 100%;
   background-color: #262729;
 }
+@media only screen and (min-width: 1000px){
+  .messageContent{
+    display: block !important;
+  }

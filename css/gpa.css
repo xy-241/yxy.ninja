@@ -152,6 +152,9 @@ select, input{
 
 
 @media only screen and (min-width: 1000px){
+  .gpaContent{
+    display:  block !important;
+  }
   .oneModule{
     display: flex;
 

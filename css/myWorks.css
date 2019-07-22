@@ -54,6 +54,7 @@
   font-weight: 800;
 
   cursor: pointer;
+  text-decoration: none;
 
 }
 .tabButton:nth-child(1){
@@ -190,8 +191,61 @@ button{
   display: none;
 }
 .goBack{
+  font-family: shopFont2;
+  margin-top: 8px;
+  margin-left: 8px;
+  text-align: center;
+
+  background-color: white;
+  border:none;
+  border: 1px black solid;
+  font-size: 1.5em;
+  padding-top: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+
   display: none;
 }
+.goBack:hover{
+  background-color: black;
+  color:rgba(230, 231, 232, 1);
+  transition: all 0.4s ease-in-out;
+}
+
+
+.shoppingCart h3{
+  text-align: center;
+  width: 100%;
+
+  margin-top: 50px;
+  font-family: shopFont2;
+  font-size: 3em;
+}
+.checkout{
+  font-family: shopFont2;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  margin-bottom: 100px;
+  text-align: center;
+
+  background-color: white;
+  border:none;
+  border: 1px black solid;
+  font-size: 2em;
+  padding-top: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+
+  display: none;
+}
+.checkout:hover{
+  background-color: black;
+  color:rgba(230, 231, 232, 1);
+  transition: all 0.4s ease-in-out;
+}
+
 
 
 /*SubPages*/
@@ -201,6 +255,7 @@ button{
 
 @media only screen and (min-width: 1000px){
   .workContent{
+    display: block !important;
     padding-top: 0px;
   }
   .banner{

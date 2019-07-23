@@ -1,4 +1,33 @@
+.cartItemName, .cartItemPrice, .cartItemNum, .removeButton, .cartTotal{
+  font-family: shopFont2;
+}
 
+.cartItemDes{
+  display: flex;
+
+}
+.cartItemBuyingInfo{
+  display: flex;
+}
+.cartItemPic img{
+  height:100px;
+  width:100px;
+  display: block;
+}
+
+
+/*Nav / footer*/
+.sideNav ul li{
+  font-family: shopFont2;
+}
+.homeFooter p{
+  font-family: shopFont2;
+}
+.copyright{
+  font-family: shopFont2;
+}
+
+/*Nav / footer*/
 .workContent{  /*== homeContent*/
   padding-top: 50px;
 }
@@ -30,8 +59,8 @@
 .banner h2{
   text-align: center;
   font-family: shopFont2;
-  font-weight:900;
-  font-size: 3.5em;
+  font-weight:500;
+  font-size: 3.9em;
   color:white;
 
   position: absolute;
@@ -51,7 +80,7 @@
   border-bottom: 1px solid #000066;
   font-family: shopFont2;
   font-size:1.2em;
-  font-weight: 800;
+  font-weight: 500;
 
   cursor: pointer;
   text-decoration: none;
@@ -83,6 +112,7 @@
 
   margin-top: 50px;
   font-family: shopFont2;
+  font-weight: 500;
   font-size: 3em;
 }
 .shopItems{
@@ -219,6 +249,7 @@ button{
 
   margin-top: 50px;
   font-family: shopFont2;
+  font-weight: 500;
   font-size: 3em;
 }
 .checkout{
@@ -268,12 +299,12 @@ button{
 
   .tabButton{
     font-size: 1.8em;
-    font-weight: 600;
+
   }
 
   .subPage h3{
     font-size: 3.7em;
-    font-weight: 600;
+
   }
   .shopItems{
     flex-direction: row;

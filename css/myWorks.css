@@ -1,14 +1,15 @@
 .test{
-  display: none;
-}
+  }
 
-.cartItemName, .cartItemPrice, .cartItemNum, .removeButton, .cartTotal{
+.cartItemName, .cartItemPrice, .cartItemNum, .removeButton, .cartTotal, .cartEmpty{
   font-family: shopFont2;
 }
 
 .cartItem{
   padding-bottom: 15px;
 }
+
+
 .cartItemDes{
   padding-left: 20px;
   padding-right: 20px;
@@ -18,12 +19,16 @@
 }
 .cartItems{
   display: flex;
+  flex-direction: column;
   justify-content: center;
   margin-top: 10px;
+
   text-align: center;
 }
 .cartItem{
-
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
   border-radius: 5%;
   background-color: rgba(230, 231, 232, 0.24);
   width: 80%;
@@ -35,6 +40,7 @@
 
 .cartItemInfo{
   width: 100%;
+
 }
 .removeButton{
   font-family: shopFont2;
@@ -48,8 +54,8 @@
   background-color: white;
   border:none;
   border: 1px black solid;
-  font-size: 1em;
-  padding-top: 5px;
+  font-size: 1.1em;
+  padding-top: 3px;
   padding-left: 5px;
   padding-right: 5px;
 }
@@ -64,22 +70,55 @@
   justify-content: center;
 
 }
+.cartItemName{
+  font-size: 1.2em;
+}
 .cartItemBuyingInfo{
   display: flex;
   justify-content: space-between;
   width:100%;
+
   margin-top: 70px;
   margin-left: 10px;
 }
 
+.cartItemPrice{
+  padding-top: 4px;
+  font-size: 1.1em;
+}
 .cartItemNumWrapper input{
-  margin-bottom: 3px;
+  display: block;
+  padding-top: 2px;
+  padding-left: 2px;
+
   width:40px;
+  font-size: 1.1em;
 }
 .cartItemPic img{
   height:100px;
   width:100px;
   display: block;
+}
+
+.cartTotal{
+  display: flex;
+  justify-content: flex-end;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  width: 80%;
+  font-size: 1.2em;
+}
+.cartTotal p{
+  margin-left: 10px;
+}
+.cartEmpty{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  width: 80%;
+  font-size: 1.2em;
+  text-align: center;
 }
 
 
@@ -384,6 +423,47 @@ button{
   }
   .item2{
     margin-left: 5px;
+  }
+
+}
+@media only screen and (min-width: 600px){
+  .cartItemInfo{
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 50px;
+  }
+
+  .cartItemName{
+    font-size: 1.4em;
+    flex-basis: 25%;
+  }
+  .cartItemBuyingInfo{
+    margin-top: 0px;
+    justify-content: space-around;
+    flex-basis: 75%;
+  }
+  .cartItemNumWrapper input{
+    padding-bottom: 0px;
+    font-size: 1.3em;
+  }
+  .cartTotal{
+    font-size: 1.6em;
+  }
+  .cartEmpty{
+    font-size: 1.6em;
+  }
+
+
+
+
+  .cartItemPrice{
+    padding-top: 4px;
+    font-size: 1.3em;
+  }
+
+  .removeButton{
+    font-size: 1.3em;
   }
 
 }

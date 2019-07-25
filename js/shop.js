@@ -22,7 +22,6 @@ for(var i=0; i<storedCartItems.length; i++){
   var src = storedCartItems[i]["src"];
   var value = storedCartItems[i]["value"];
 
-  alert(i);
   //Get the 4 types of values from the localStorage
 
   var itemRow = document.createElement("div");
@@ -55,14 +54,14 @@ for(var i=0; i<storedCartItems.length; i++){
   //Give the newly created button an event handler
   //NumSelected
   var quantityInputs = document.getElementsByClassName("cartItemNum");
-  for(var j=0; i<quantityInputs.length; j++){
-    quantityInputs[i].addEventListener("change", quantityInputUpdate);
+  for(var j=0; j<quantityInputs.length; j++){
+    quantityInputs[j].addEventListener("change", quantityInputUpdate);
   }
   //NumSelected
   //Remove Button
   var removeButtons = document.getElementsByClassName("removeButton");
-  for(var j=0; i<removeButtons.length; j++){
-    removeButtons[i].addEventListener("click", removeItemFromCart);
+  for(var j=0; j<removeButtons.length; j++){
+    removeButtons[j].addEventListener("click", removeItemFromCart);
   }
   //Remove Button
 }

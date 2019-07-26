@@ -1,13 +1,19 @@
 .test{
   }
 
-.cartItemName, .cartItemPrice, .cartItemNum, .removeButton, .cartTotal, .cartEmpty{
+.removeButton, .cartItemNum{
   font-family: shopFont2;
+}
+.cartItemName, .cartItemPrice, .cartTotal, .cartEmpty{
+  font-family: text;
 }
 
 .cartItem{
   padding-bottom: 15px;
+  box-shadow: 0 0px 2px 0 rgba(0, 0, 0, 0.2);
 }
+
+
 
 
 .cartItemDes{
@@ -58,6 +64,8 @@
   padding-top: 3px;
   padding-left: 5px;
   padding-right: 5px;
+
+  box-shadow: 0 0px 2px 0 rgba(0, 0, 0, 0.5);
 }
 .removeButton:hover{
   background-color: black;
@@ -83,7 +91,7 @@
 }
 
 .cartItemPrice{
-  padding-top: 4px;
+  padding-top: 2px; /*shopFont2 4px*/  /*Text also responsive*/
   font-size: 1.1em;
 }
 .cartItemNumWrapper input{
@@ -191,6 +199,7 @@
   cursor: pointer;
   text-decoration: none;
 
+
 }
 .tabButton:nth-child(1){
   margin-right: 10px;
@@ -238,6 +247,8 @@
 
   padding-top: 75px;
   padding-bottom: 75px;
+
+  box-shadow: 0 0px 2px 0 rgba(0, 0, 0, 0.2);
 }
 .itemName{
   font-family: shopFont2;
@@ -271,6 +282,8 @@
   padding-top: 3px;
 
   font-size: 1.2em;
+
+  box-shadow: 0 0px 2px 0 rgba(0, 0, 0, 0.5);
 }
 .addToCart:hover{
   background-color: black;
@@ -315,6 +328,8 @@ button{
   padding-top: 5px;
   padding-left: 5px;
   padding-right: 5px;
+
+  box-shadow: 0 0px 2px 0 rgba(0, 0, 0, 0.5);
 }
 .goToShoppingCart:hover{
   background-color: black;
@@ -341,6 +356,8 @@ button{
   padding-right: 5px;
 
   display: none;
+
+  box-shadow: 0 0px 2px 0 rgba(0, 0, 0, 0.5);
 
 
 }
@@ -378,6 +395,8 @@ button{
   padding-right: 5px;
 
   display: none;
+
+  box-shadow: 0 0px 2px 0 rgba(0, 0, 0, 0.5);
 }
 .checkout:hover{
   background-color: black;
@@ -427,6 +446,9 @@ button{
 
 }
 @media only screen and (min-width: 600px){
+  .cartItem{
+    border-radius: 0;
+  }
   .cartItemInfo{
     display: flex;
     margin-top: auto;
@@ -464,6 +486,11 @@ button{
 
   .removeButton{
     font-size: 1.3em;
+  }
+
+
+  .cartItemPrice{
+    padding-top: 0px;
   }
 
 }

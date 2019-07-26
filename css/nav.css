@@ -128,6 +128,8 @@ a{
 }
 .onNavPage{
   color:grey;
+  pointer-events: none;
+
 }
 /*Nav part*/
 
@@ -243,6 +245,7 @@ a{
 }
 .onPage{
   color:grey;
+  pointer-events: none;
 }
 
 .homeFooter a:hover{

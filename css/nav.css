@@ -245,6 +245,7 @@ a{
 }
 .onPage{
   color:grey;
+
   pointer-events: none;
 }
 
@@ -385,6 +386,8 @@ a{
   }
   .onPage{
     color:white;
+  
+
   }
 }
 

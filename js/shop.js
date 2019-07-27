@@ -1,7 +1,11 @@
+
+
 if(document.readyState == "loading"){
   document.addEventListener("DOMContentLoaded", ready);
+
 } else{
   ready();
+
 }
 //localStorage
 var data = localStorage.getItem("storedCartItems");
@@ -12,6 +16,8 @@ if(data ==null){
   var storedCartItems = JSON.parse(data);
 }
 //localStorage
+
+
 
 function ready(){
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -75,13 +81,18 @@ for(var i=0; i<storedCartItems.length; i++){
   }
   //Tab Actions
 
+  //Modal
+  window.addToCartModal = document.getElementsByClassName("addToCartModal")[0];
+  document.getElementsByClassName("closeBtn")[0].addEventListener("click", removeModal);
+  window.addEventListener("click", clickOutsideModal);
+  //Modal
   //Add to cart
   var addToCart = document.getElementsByClassName("addToCart");
   for(var i = 0; i<addToCart.length; i++){
     addToCart[i].addEventListener("click", addToCartFunc);
   }
 
-  //Add to cart
+
 
 
   //Go to cart button
@@ -220,7 +231,22 @@ function updateTheCart(){
   //Check if carts has anything
 
 }
+function removeModal(event){
+  var button = event.target;
+
+  button.parentElement.parentElement.parentElement.style.display = "none";
+}
+function clickOutsideModal(event){
+  var area = event.target;
+  if(area == window.addToCartModal){
+    window.addToCartModal.style.display = "none";
+  }
+}
 function addToCartFunc(event){
+  //MOdal
+
+  window.addToCartModal.style.display = "block";
+  //MOdal
   var button = event.target;
   var item = button.parentElement.parentElement;
   var itemRow = document.createElement("div");

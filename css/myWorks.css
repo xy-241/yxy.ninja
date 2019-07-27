@@ -1,9 +1,60 @@
-.test{
-  }
+/*Modal*/
+.addToCartModal{
+  display: none;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index:1000;
+  overflow:hidden;
+  top:0;
+  left: 0;
+  background-color: rgba(230, 231, 232, 0.8);
+}
+.modalContent{
+  margin: 20% auto;
+  width: 70%;
 
-.removeButton, .cartItemNum{
+  text-align: center;
+  background-color: #262729;
+  color: white;
+
+  padding-bottom:55px;
+
+  box-shadow: 0 0px 9px 0 rgba(0, 0, 0, 0.4);
+
+  animation-name: modalOpen;
+  animation-duration: 1.2s;
+}
+.modalHeader{
+  display: flex;
+  justify-content: flex-end;
+}
+.closeBtn{
+  cursor: pointer;
+  margin-right: 10px;
+  font-size: 2em;
+  transition: all 0.4s ease-in-out;
+}
+.closeBtn:hover{
+  color: grey;
+}
+.modalBody{
+  margin-top: 20px;
+}
+.modalBodyHeader, .modalBodyMessage{
+  font-family: text;
+}
+.modalBodyHeader{
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+/*Modal*/
+
+
+.removeButton, {
   font-family: shopFont2;
 }
+
 .cartItemName, .cartItemPrice, .cartTotal, .cartEmpty{
   font-family: text;
 }
@@ -94,18 +145,23 @@
   padding-top: 2px; /*shopFont2 4px*/  /*Text also responsive*/
   font-size: 1.1em;
 }
+.cartItemNumWrapper{
+
+}
 .cartItemNumWrapper input{
   display: block;
-  padding-top: 2px;
-  padding-left: 2px;
-
+  font-family: text;
+  padding-top: 4px;
+  padding-left: 4px;
   width:40px;
   font-size: 1.1em;
+
 }
 .cartItemPic img{
   height:100px;
   width:100px;
   display: block;
+  box-shadow: 0 0px 1px 0 rgba(0, 0, 0, 0.2);
 }
 
 .cartTotal{
@@ -259,8 +315,9 @@
 }
 .shopItem img{
   display: block;
-  border: 1px black solid;
+
   margin:  auto;
+  box-shadow: 0 0px 1px 0 rgba(0, 0, 0, 0.2);
 }
 .itemPrice{
   font-family: shopFont2;
@@ -493,4 +550,29 @@ button{
     padding-top: 0px;
   }
 
+
+
+/*MOdal*/
+  .closeBtn{
+    font-size: 3em;
+  }
+
+  .modalBody{
+    margin-top: 20px;
+  }
+
+  .modalBodyHeader{
+    font-size: 2em;
+    margin-bottom: 5px;
+  }
+  .modalBodyMessage{
+    font-size:1.4em;
+  }
+/*Modal*/
+
+}
+
+@keyframes modalOpen {
+  from {opacity: 0}
+  to {opacity: 1}
 }

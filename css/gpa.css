@@ -111,6 +111,7 @@ select, input{
 }
 .oneModule{
   background-color: rgba(230, 231, 232, 0.24);
+  box-shadow: 0 0px 2px 0 rgba(0, 0, 0, 0.2);
   margin-bottom: 10px;
   padding-bottom: 10px;
   padding-top: 28px;
@@ -149,7 +150,17 @@ select, input{
 }
 .calculateButton{
   font-size: 1.5em;
+  margin-bottom: 30px;
+
+
+}
+
+.gpaResult{
+  text-align: center;
+  font-size: 3em;
+  font-family: text;
   margin-bottom: 100px;
+  text-decoration: underline;
 
 }
 

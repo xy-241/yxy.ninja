@@ -43,23 +43,42 @@
 
 
     <article class="safetyContent">
+      <h2>Track You Down</h2>
 
 
 
-      <footer class="homeFooter">
-        <div class="footerSelection">
-          <p class="backToTop"><a href="#">Back To Top</a></p>
-          <p class="homeFooter0"><a href="index.html">Home</a></p>
+    <section class="trackMe">
+      <div class="trackMeIntro">
+        <p>There are many ways for strangers to get your sensitive data. Precise position of the user is one of them.</p>
+        <p>Most Users give away their precise location infomation to strangers without knowing what actually took place behind the sceen by just pressing one simple button</p>
+        <p>Press the 'Track Me' button below to see how precise strangers can track you over the Internet</p>
+        <p>If your device has GPS integrated, the result will be more precise.</p>
+        <p>You can drag the little yellow man at the right side of the map to take a look of the surrounding in reality (that is what strangers can see)</p>
+      </div>
+      <div id="map"></div>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDsgDlDWdce4y8FzDa2-Hb1MPcpqGHtGs&callback=initMap"
+      async defer></script>
+      <button type="button" onclick="getLocation();" class="trackMeButton">Track Me</button>
+    </section>
 
-          <p class=homeFooter2><a href="contactMe.html">Send Me Message</a></p>
 
-          <p class="homeFooter3"><a href="gpa.html">GPA Cal</a></p>
-          <p class="homeFooter4"><a href="safety.html" class="onPage">Internet Safety</a></p>
-          <p class="homeFooter1"><a href="myWorks.html">Hacker's Shop</a></p>
-        </div>
-        <div class="copyright">Copyright  &copy; 2019 YXY. All rights reserved.</div>
-      </footer>
+
+
+    <footer class="homeFooter">
+      <div class="footerSelection">
+        <p class="backToTop"><a href="#">Back To Top</a></p>
+        <p class="homeFooter0"><a href="index.html">Home</a></p>
+
+        <p class=homeFooter2><a href="contactMe.html">Send Me Message</a></p>
+
+        <p class="homeFooter3"><a href="gpa.html">GPA Cal</a></p>
+        <p class="homeFooter4"><a href="safety.html" class="onPage">Internet Safety</a></p>
+        <p class="homeFooter1"><a href="myWorks.html">Hacker's Shop</a></p>
+      </div>
+      <div class="copyright">Copyright  &copy; 2019 YXY. All rights reserved.</div>
+    </footer>
     </article>
+
 
   </body>
 </html>

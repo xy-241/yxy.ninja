@@ -5,7 +5,129 @@ if(document.readyState == "loading"){
 }
 
 
+
+
+
 function ready(){
+  //localStorage
+  var data = localStorage.getItem("storedGpaResults");
+  if(data ==null){
+    window.storedGpaResults = [];
+
+    var formField = document.getElementsByClassName("Graderesults")[0];
+    var initialForm = document.createElement("form");
+    initialForm.classList.add("grade");
+
+    initialFormContent = `
+    <div class="schoolTerm">
+      <p>Semester 1</p>
+    </div>
+
+    <div class="modules">
+      <div class="oneModule">
+
+        <div class="userInput">
+          <label>Module Name:</label>
+          <input type="text" class="moduleName" value="" placeholder="Module Name 1">
+        </div>
+
+
+        <div class="userInput">
+          <label>Grade:</label>
+          <select class="moduleGrade">
+            <option selected="selected" value="NA">-</option>
+            <option value="A">A</option>
+            <option value="B+">B+</option>
+            <option value="B">B</option>
+            <option value="C+">C+</option>
+            <option value="C">C</option>
+            <option value="D+">D+</option>
+            <option value="D">D</option>
+            <option value="F">F</option>
+          </select>
+        </div>
+
+        <div class="userInput">
+          <label>Credits:</label>
+          <input type="number" class="moduleCredit" value="">
+        </div>
+      </div>
+    </div>
+
+
+    <div class="moduleButtonDiv">
+      <input type="button" class="moduleButton" value="Add Another Module">
+    </div>`;
+
+    initialForm.innerHTML = initialFormContent;
+
+    formField.insertBefore(initialForm, formField.getElementsByClassName("addForm")[0]);
+
+  } else{
+    window.storedGpaResults = JSON.parse(data);
+
+    var formField = document.getElementsByClassName("Graderesults")[0];
+    for(var i=0; i< window.storedGpaResults.length; i++){
+
+      var initialForm = document.createElement("form");
+      initialForm.classList.add("grade");
+
+      initialFormContent = `
+      <div class="schoolTerm">
+        <p>Semester ${i+1}</p>
+      </div>
+
+      <div class="modules">`;
+
+      for(var j=0; j<window.storedGpaResults[i].length; j++){
+        var moduleValueSet = window.storedGpaResults[i][j];
+        initialFormContent +=  `
+        <div class="oneModule">
+
+          <div class="userInput">
+            <label>Module Name:</label>
+            <input type="text" class="moduleName" value="${moduleValueSet["moduleName"]}">
+          </div>
+
+
+          <div class="userInput">
+            <label>Grade:</label>
+            <select class="moduleGrade">
+              <option selected="selected" value="${moduleValueSet["moduleGrade"]}">${moduleValueSet["moduleGrade"]}</option>
+              <option value="A">A</option>
+              <option value="B+">B+</option>
+              <option value="B">B</option>
+              <option value="C+">C+</option>
+              <option value="C">C</option>
+              <option value="D+">D+</option>
+              <option value="D">D</option>
+              <option value="F">F</option>
+              <option value="NA">-</option>
+            </select>
+          </div>
+
+
+          <div class="userInput">
+            <label>Credits:</label>
+            <input type="number" class="moduleCredit" value="${moduleValueSet["moduleCredit"]}">
+          </div>
+        </div>
+        `;
+      }
+      initialFormContent += `
+      </div>
+
+      <div class="moduleButtonDiv">
+        <input type="button" class="moduleButton" value="Add Another Module">
+      </div>
+      `;
+      initialForm.innerHTML = initialFormContent;
+      formField.insertBefore(initialForm, formField.getElementsByClassName("addForm")[0]);
+
+    }
+
+  }
+  //localStorage
   //Add Module Button
   var moduleButtons = document.getElementsByClassName("moduleButton");
   for(var i = 0; i<moduleButtons.length; i++){
@@ -19,6 +141,8 @@ function ready(){
   //Add form button
   var addFormButton = document.getElementsByClassName("addFormButton")[0];
   addFormButton.addEventListener("click", addForm);
+
+
 }
 
 function addForm(event){
@@ -92,15 +216,24 @@ function calculateResult(event){
   var button = event.target;
   var forms = button.parentElement.parentElement.getElementsByClassName("grade");
   //Loop through the forms
+
+  storedGpaResults = [];
   for(var i =0; i< forms.length; i++){
     var form = forms[i];
     var modules = form.getElementsByClassName("modules")[0].getElementsByClassName("oneModule");
     //Loop through the modules
+    //L
+
+    storedGpaResults.push([]);
     for(var j=0; j<modules.length; j++){
       var oneModule = modules[j];
 
+      var moduleName = oneModule.getElementsByClassName("moduleName")[0].value;
       var moduleGrade = oneModule.getElementsByClassName("moduleGrade")[0].value;
       var moduleCredit = oneModule.getElementsByClassName("moduleCredit")[0].value;
+
+      storedGpaResults[i].push({"moduleName": moduleName, "moduleGrade": moduleGrade, "moduleCredit": moduleCredit});
+      localStorage.setItem("storedGpaResults", JSON.stringify(storedGpaResults));
 
 
       if(moduleCredit == "" || moduleGrade == "NA"){
@@ -143,7 +276,7 @@ function calculateResult(event){
 
   finalResult = totalGrade / totalCredit;
   finalResult = Math.round(finalResult*100)/100;
-  alert(finalResult);
+  document.getElementsByClassName("gpaResult")[0].innerText = "You GPA Is " + finalResult;
   //Calculate FUnction //
 } //End function [Calculate]
 function addAnotherModule(event){

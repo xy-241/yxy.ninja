@@ -41,6 +41,7 @@
   padding-left: 50px;
   padding-right: 50px;
   background-color: rgba(230, 231, 232, 0.24);
+  box-shadow: 0 0px 2px 0 rgba(0, 0, 0, 0.2);
   flex-basis: 33.3%;
 
 }

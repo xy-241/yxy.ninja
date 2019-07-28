@@ -67,6 +67,7 @@
   }
   .trackMeIntro p {
     font-size: 1.4em;
+    margin-bottom: 12px;
   }
   #map{
     width: 400px;

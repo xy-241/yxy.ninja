@@ -320,3 +320,7 @@ function addAnotherModule(event){
 
   moduleField.appendChild(oneModule);
 } //End FUnction [Add Module]
+
+function addEventToCredits(event){
+  var creditsList = document.getElementsByClassName("moduleCredit");
+}

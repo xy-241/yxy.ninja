@@ -203,6 +203,8 @@ function quantityInputUpdate(event){
   var button = event.target;
 
   //Making sure the cartItem is one or bigger
+  var roundedValue = Math.round(button.value);
+  button.value = roundedValue;
   if(button.value < 1 || isNaN(button.value)){
     button.value = 1;
   }

@@ -98,10 +98,17 @@ for(var i=0; i<storedCartItems.length; i++){
   //Go to cart button
   var goToShoppingCart = document.getElementsByClassName("goToShoppingCart")[0];
   goToShoppingCart.addEventListener("click", showShoppingCart);
+
+  var goToShoppingCart = document.getElementsByClassName("shopCartLogo")[0];
+  goToShoppingCart.addEventListener("click", showShoppingCart);
+
   //Go to cart button
 
   //Go Back Button
   var goBack = document.getElementsByClassName("goBack")[0];
+  goBack.addEventListener("click", showShoppingItems);
+
+  goBack = document.getElementsByClassName("shopLogo")[0];
   goBack.addEventListener("click", showShoppingItems);
   //Go Back Button
 
@@ -336,12 +343,14 @@ function showShoppingCart(event){
   document.getElementsByClassName("sellingItems")[0].style.display = "none";
   document.getElementsByClassName("itemsAvailable")[0].style.display = "none";
   document.getElementsByClassName("goToShoppingCart")[0].style.display = "none";
+  document.getElementsByClassName("shopCartLogo")[0].style.display = "none";
   //HIde the shopping items
 
   //Display shopping cart
   document.getElementsByClassName("shoppingCart")[0].style.display = "block";
   document.getElementsByClassName("goBack")[0].style.display = "block";
   document.getElementsByClassName("checkout")[0].style.display = "block";
+  document.getElementsByClassName("shopLogo")[0].style.display = "block";
   //Display shopping cart
 }
 //Go Back
@@ -350,12 +359,14 @@ function showShoppingItems(event){
   document.getElementsByClassName("sellingItems")[0].style.display = "block";
   document.getElementsByClassName("itemsAvailable")[0].style.display = "block";
   document.getElementsByClassName("goToShoppingCart")[0].style.display = "block";
+  document.getElementsByClassName("shopCartLogo")[0].style.display = "block";
   //Display the shopping items
 
   //Hide shopping cart
   document.getElementsByClassName("shoppingCart")[0].style.display = "none";
   document.getElementsByClassName("goBack")[0].style.display = "none";
   document.getElementsByClassName("checkout")[0].style.display = "none";
+  document.getElementsByClassName("shopLogo")[0].style.display = "none";
   //Hide shopping cart
 }
 

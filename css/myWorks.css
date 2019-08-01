@@ -1,10 +1,19 @@
 /*Nav shopLogo*/
+.logoPosition{
+  position: fixed;
+  display: flex;
+  justify-content: flex-end;
+  width:100%;
+
+
+}
+
 .shopCartLogo{
   display: block;
-  display: none;
+
   position: fixed;
   top:0.6%;
-  left:85%;
+
   cursor: pointer;
   background: url("../img/shop/shoppingCart.svg") no-repeat;
 
@@ -18,13 +27,12 @@
   filter: invert(0.5);
 }
 
+
 .shopLogo{
-
-  display: block;
-
+  display: none;
   position: fixed;
   top:0.6%;
-  left:85%;
+
   cursor: pointer;
   background: url("../img/shop/shopLogo.svg") no-repeat;
 

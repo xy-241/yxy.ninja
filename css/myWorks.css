@@ -519,6 +519,9 @@ button{
 }
 
 @media only screen and (min-width: 1000px){
+  .logoPosition{
+    display: none;
+  }
   .workContent{
     display: block !important;
     padding-top: 0px;

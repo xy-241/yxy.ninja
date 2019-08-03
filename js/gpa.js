@@ -49,7 +49,7 @@ function ready(){
 
         <div class="userInput">
           <label>Credits:</label>
-          <input type="number" class="moduleCredit" value="">
+          <input type="number" class="moduleCredit">
         </div>
       </div>
     </div>
@@ -142,6 +142,9 @@ function ready(){
   var addFormButton = document.getElementsByClassName("addFormButton")[0];
   addFormButton.addEventListener("click", addForm);
 
+  //Making sure all credit inputs can be verified
+  addEventToCredits();
+
 
 }
 
@@ -188,7 +191,7 @@ function addForm(event){
 
       <div class="userInput">
         <label>Credits:</label>
-        <input type="number" class="moduleCredit" value="">
+        <input type="number" class="moduleCredit" >
       </div>
     </div>
   </div>
@@ -206,6 +209,8 @@ function addForm(event){
     var moduleButton = moduleButtons[i];
     moduleButton.addEventListener("click", addAnotherModule);
   }
+
+  addEventToCredits();
 
 } //End Function [Add Form]
 function calculateResult(event){
@@ -313,14 +318,31 @@ function addAnotherModule(event){
 
   <div class="userInput" id="creditLast">
   <label>Credits:</label>
-    <input type="number" class="moduleCredit" value="">
+    <input type="number" class="moduleCredit" >
   </div>
   `;  //HIdden
   oneModule.innerHTML = oneModuleContent;
 
   moduleField.appendChild(oneModule);
+
+
+  addEventToCredits();
 } //End FUnction [Add Module]
 
-function addEventToCredits(event){
+function addEventToCredits(){
   var creditsList = document.getElementsByClassName("moduleCredit");
+  for(var i=0; i<creditsList.length; i++){
+    creditsList[i].addEventListener("change", verifyCreditInput);
+  }
+}
+function verifyCreditInput(event){
+  var button = event.target;
+  var roundedValue = Math.round(button.value);
+  button.value = roundedValue;
+  alert(button.value);
+  alert(isNaN(button.value));
+  if(button.value < 1 || isNaN(button.value)){
+    button.value = 1;
+  }
+
 }

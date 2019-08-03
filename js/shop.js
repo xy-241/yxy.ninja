@@ -203,11 +203,12 @@ function quantityInputUpdate(event){
   var button = event.target;
 
   //Making sure the cartItem is one or bigger
-  var roundedValue = Math.round(button.value);
-  button.value = roundedValue;
+
   if(button.value < 1 || isNaN(button.value)){
     button.value = 1;
   }
+  var roundedValue = Math.round(button.value);
+  button.value = roundedValue;
   //Making sure changes to cart items are recorded back to the localStorage
   var itemName = button.parentElement.parentElement.parentElement.getElementsByClassName("cartItemName")[0].innerText;
   for(var i=0; i<storedCartItems.length; i++){

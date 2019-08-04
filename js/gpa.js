@@ -337,12 +337,11 @@ function addEventToCredits(){
 }
 function verifyCreditInput(event){
   var button = event.target;
-  var roundedValue = Math.round(button.value);
-  button.value = roundedValue;
-  alert(button.value);
-  alert(isNaN(button.value));
+
   if(button.value < 1 || isNaN(button.value)){
     button.value = 1;
   }
+  var roundedValue = Math.round(button.value);
+  button.value = roundedValue;
 
 }

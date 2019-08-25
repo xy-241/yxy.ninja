@@ -1,0 +1,31 @@
+body{
+  background: #2b2d2f;
+}
+
+
+
+.btnEmergency{
+  display: block;
+  background: url("../img/index/idea.svg") no-repeat;
+  width:54px;
+  height:54px;
+  filter: invert(1);
+  margin-left: auto;
+  margin-right: auto;
+
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+}
+.btnEmergency:hover{
+  filter: invert(0.5);
+}
+
+
+.btnChoices{
+  text-align: center;
+  margin-top: 100px;
+}
+
+.btnChoices a {
+  width:180px;
+}
